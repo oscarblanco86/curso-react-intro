@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +6,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1000' height='1000' preserveAspectRatio='none' viewBox='0 0 1000 1000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1019%26quot%3b)' fill='none'%3e%3crect width='1000' height='1000' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1020%26quot%3b)'%3e%3c/rect%3e%3cpath d='M272.3292939128083 472.0817547553828L408.37176187878686 399.74669143136737 199.99423058879287 336.0392867894042z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M775.1090799968995 732.4378676802844L618.3385257978565 618.5373929157104 504.4380510332825 775.3079471147532 661.2086052323255 889.2084218793274z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M833.696%2c951.947C906.088%2c956.384%2c986.582%2c941.911%2c1023.281%2c879.353C1060.274%2c816.294%2c1033.969%2c738.634%2c995.194%2c676.655C959.167%2c619.069%2c901.497%2c580.452%2c833.696%2c576.315C757.215%2c571.649%2c670.604%2c587.289%2c634.031%2c654.62C598.398%2c720.22%2c638.885%2c796.366%2c680.504%2c858.342C716.261%2c911.589%2c769.677%2c948.023%2c833.696%2c951.947' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M217.371%2c1194.102C281.691%2c1194.68%2c344.675%2c1170.191%2c379.709%2c1116.246C418.1%2c1057.131%2c434.19%2c978.608%2c395.644%2c919.594C359.369%2c864.057%2c283.681%2c865.92%2c217.371%2c867.708C155.419%2c869.378%2c88.435%2c876.592%2c55.007%2c928.779C19.423%2c984.332%2c25.578%2c1057.098%2c60.013%2c1113.37C92.994%2c1167.265%2c154.188%2c1193.534%2c217.371%2c1194.102' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M926.1253780805204 569.9749320731731L987.7114675859824 749.3891944386108 1098.6660074336678 626.1616939066569z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M196.21865726448178 467.1686830014783L122.70877859045986 599.7840146136223 255.32411020260383 673.2938932876442 328.83398887662577 540.6785616755002z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1019'%3e%3crect width='1000' height='1000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='0%25' x2='100%25' y2='100%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1020'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='%2300459e' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+  /* background from https://bgjar.com/ */
+  background-repeat: no-repeat;
+  background-size: cover; 
+  font-family: "Ubuntu", sans-serif;
+  color:antiquewhite;
+  text-align: center;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+#root {
+  width: 500px;
+  height: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(5px);
+  /* background-color: aqua; */
 }
