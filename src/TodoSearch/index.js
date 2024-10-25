@@ -5,11 +5,10 @@ function TodoSearch({searchValue,setSearchValue}) {
   
   return (
     <input 
-      placeholder="Cortar cebolla" 
+      placeholder="Search in your TODOs" 
       className='TodoSearch'
       value={searchValue}
       onChange={(event) => {
-        // console.log("escribiste en",event.target.value);
         setSearchValue(event.target.value);
       }}
       />
