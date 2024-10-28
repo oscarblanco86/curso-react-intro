@@ -7,6 +7,7 @@ import { TodosLoading } from '../TodosLoading';
 import { TodosError } from '../TodosError';
 import { EmptyTodos } from '../EmptyTodos';
 import { CreateTodoButton } from '../CreateTodoButton';
+import { Modal } from '../Modal';
 import { TodoContext } from "./../TodoContext";
 
 function AppUI() {
@@ -22,35 +23,49 @@ function AppUI() {
           completeTodo,
           deleteTodo,
           loading,
-          error
+          error,
+          openModal,
+          setOpenModal
         }) => (
           
           <>
               <TodoCounter
                 completed={completedTodos}
-                total={totalTodos} /><TodoSearch
+                total={totalTodos} />
+              <TodoSearch
                 searchValue={searchValue}
-                setSearchValue={setSearchValue} /><TodoList>
-                  {loading && (
-                    <>
-                    console.log("Here",TodoContext);
-                      <TodosLoading />
-                      <TodosLoading />
-                      <TodosLoading />
-                    </>
-                  )}
-                  {error && <TodosError />}
-                  {(!loading && searchedTodos.length === 0) && <EmptyTodos />}
+                setSearchValue={setSearchValue} />
+              <TodoList>
+                {loading && (
+                  <>
+                    <TodosLoading />
+                    <TodosLoading />
+                    <TodosLoading />
+                  </>
+                )}
+                {error && <TodosError />}
+                {(!loading && searchedTodos.length === 0) && <EmptyTodos />}
 
-                  {searchedTodos.map(todo => (
-                    <TodoItem
-                      key={todo.text}
-                      text={todo.text}
-                      isCompleted={todo.isCompleted}
-                      onComplete={() => completeTodo(todo.text)}
-                      onDelete={() => deleteTodo(todo.text)} />
-                  ))}
-              </TodoList><CreateTodoButton />
+                {searchedTodos.map(todo => (
+                  <TodoItem
+                    key={todo.text}
+                    text={todo.text}
+                    isCompleted={todo.isCompleted}
+                    onComplete={() => completeTodo(todo.text)}
+                    onDelete={() => deleteTodo(todo.text)} />
+                  )
+                )}
+              </TodoList>
+              
+              <CreateTodoButton 
+                isOpenModal = {openModal}
+                setOpenModal = {setOpenModal} />
+
+              {openModal &&(
+                <Modal>
+                  La funcionalidad de agregar todo
+                </Modal>
+              )}
             </>
           )}
       </TodoContext.Consumer>
