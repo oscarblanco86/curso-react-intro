@@ -24,3 +24,6 @@ yarn-error.log*
 
 # vscode
 .vscode
+
+#git
+merge-diff.txt
