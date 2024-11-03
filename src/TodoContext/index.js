@@ -43,6 +43,12 @@ function TodoProvider({children}) {
         saveTodos(newTodos);
       }
 
+      const addTodo = (text) => {
+        const newTodos = [...todos, { text, isCompleted: false}]
+        saveTodos(newTodos);
+        console.log(newTodos);
+      }
+
     return (
         <TodoContext.Provider value={{
             completedTodos,
@@ -56,6 +62,7 @@ function TodoProvider({children}) {
             error,
             openModal,
             setOpenModal,
+            addTodo
         }}>
         {children}
         </TodoContext.Provider>
